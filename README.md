@@ -75,7 +75,7 @@ systematic comparison of digital filter design methods, all targeting a lowpass 
 
 additional investigations: effect of passband edge, transition bandwidth, and filter length on equiripple fir performance. alternation points were visually identified and counted to confirm chebyshev optimality.
 
-**extension:** the butterworth filter was also designed entirely without the signal processing toolbox — analog poles were placed manually, mapped to the z-plane via the bilinear transform, and the frequency response was evaluated directly from the transfer function definition.
+**extension:** the butterworth filter was also designed entirely without the signal processing toolbox. i.e., the analog poles were placed manually, mapped to the z-plane via the bilinear transform, and the frequency response was evaluated directly from the transfer function definition.
 
 ### ca4 — time-frequency analysis (stft and spectrograms)
 
@@ -88,34 +88,18 @@ additional investigations: effect of passband edge, transition bandwidth, and fi
 ## requirements
 
 - **matlab r2024a** or later (earlier versions likely work but are untested)
-- **signal processing toolbox** — required for `butter`, `cheby1`, `ellip`, `firpm`, `freqz`, `spectrogram`, `kaiserord`, `audioplayer`, etc.
-- **audio toolbox** — optional, used only by `wav_meter_gui.m` for real-time playback
+- **signal processing toolbox** required for `butter`, `cheby1`, `ellip`, `firpm`, `freqz`, `spectrogram`, `kaiserord`, `audioplayer`, etc.
+- **audio toolbox** optional, used only by `wav_meter_gui.m` for real-time playback
 
 ---
 
 ## usage
 
-each script is self-contained. navigate to the relevant assignment folder and run:
-
-```matlab
-% Example: CA3, Question 1
-cd CA3
-q1_butterworth
-
-% Example: CA4, Question 1
-cd CA4
-q1_chirp
-```
-
-for ca2, place `Toreador.wav` in the working directory before running the main script. the gui can be launched with:
-
-```matlab
-wav_meter_gui("Toreador.wav")
-```
+each script is self-contained. navigate to the relevant assignment folder and j run. 
 
 ---
 
-## notes
+## etc.
 
 - all fir window designs use odd-length filters (type i linear phase) unless otherwise noted.
 - frequency axes are normalized to π rad/sample where applicable; matlab's convention uses the [0, 1] scale where 1 corresponds to π.

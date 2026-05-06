@@ -4,7 +4,6 @@
 ## repository structure
 
 ```
-.
 ├── CA3/
 │   ├── q1_butterworth.m            # 6th-order Butterworth LPF (toolbox)
 │   ├── q1_butterworth_manual.m     # 6th-order Butterworth LPF (no toolbox — manual bilinear transform)
